@@ -1,4 +1,4 @@
-cp Pod::Spec.new do |s|
+Pod::Spec.new do |s|
   s.name             = "WazeKit"
   s.version          = "0.0.1"
   s.summary          = "Basic utility framework for Waze written in Swift."
