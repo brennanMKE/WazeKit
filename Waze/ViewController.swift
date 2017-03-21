@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 
     @IBAction func searchButtonTapped(_ sender: Any) {
         if let addressString = inputTextField.text, addressString.characters.count > 0 {
-            geocodeAddressString(addressString)
+            searchAddressString(addressString)
         }
         else {
             alert(title: "Waze", message: "Please enter an address.")
@@ -48,12 +48,22 @@ class ViewController: UIViewController {
         }
     }
 
+    private func searchAddressString(_ addressString: String) {
+        if !wazeLauncher.search(withAddressString: addressString) {
+            alert(title: "Waze", message: "Cannot open Waze!")
+        }
+    }
+
     private func geocodeAddressString(_ addressString: String) {
         if let addressString = inputTextField.text, addressString.characters.count > 0 {
-            let opened = wazeLauncher.searchAddressString(addressString)
-
-            if !opened {
-                alert(title: "Waze", message: "Cannot open Waze!")
+            geocoder.geocodeAddressString(addressString) {
+                [weak self] (placemarks, error) in
+                if let s = self,
+                    let location = placemarks?.first?.location {
+                    if !s.wazeLauncher.navigate(toLocation: location) {
+                        s.alert(title: "Waze", message: "Cannot open Waze!")
+                    }
+                }
             }
         }
     }

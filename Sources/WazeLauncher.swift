@@ -39,7 +39,7 @@ open class WazeLauncher: NSObject {
         return openApplication(withParameters: params)
     }
 
-    open func searchAddressString(_ addressString: String) -> Bool {
+    open func search(withAddressString addressString: String) -> Bool {
         let params = ["q" : addressString]
         return openApplication(withParameters: params)
     }
