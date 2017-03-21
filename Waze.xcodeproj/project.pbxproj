@@ -12,7 +12,6 @@
 		26896A1E1E80BB8800A9AD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26896A1C1E80BB8800A9AD0C /* Main.storyboard */; };
 		26896A201E80BB8800A9AD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26896A1F1E80BB8800A9AD0C /* Assets.xcassets */; };
 		26896A231E80BB8800A9AD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26896A211E80BB8800A9AD0C /* LaunchScreen.storyboard */; };
-		26896A2E1E80BB8800A9AD0C /* WazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896A2D1E80BB8800A9AD0C /* WazeTests.swift */; };
 		26896A461E80BBA100A9AD0C /* WazeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26896A3D1E80BBA100A9AD0C /* WazeKit.framework */; };
 		26896A4D1E80BBA100A9AD0C /* WazeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26896A4C1E80BBA100A9AD0C /* WazeKitTests.swift */; };
 		26896A4F1E80BBA100A9AD0C /* WazeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 26896A3F1E80BBA100A9AD0C /* WazeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,13 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		26896A2A1E80BB8800A9AD0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 26896A0D1E80BB8800A9AD0C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 26896A141E80BB8800A9AD0C;
-			remoteInfo = Waze;
-		};
 		26896A471E80BBA100A9AD0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26896A0D1E80BB8800A9AD0C /* Project object */;
@@ -74,9 +66,6 @@
 		26896A1F1E80BB8800A9AD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26896A221E80BB8800A9AD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26896A241E80BB8800A9AD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26896A291E80BB8800A9AD0C /* WazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26896A2D1E80BB8800A9AD0C /* WazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WazeTests.swift; sourceTree = "<group>"; };
-		26896A2F1E80BB8800A9AD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26896A3D1E80BBA100A9AD0C /* WazeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WazeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26896A3F1E80BBA100A9AD0C /* WazeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WazeKit.h; sourceTree = "<group>"; };
 		26896A401E80BBA100A9AD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,13 +81,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26896A521E80BBA100A9AD0C /* WazeKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26896A261E80BB8800A9AD0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				26896A171E80BB8800A9AD0C /* Waze */,
-				26896A2C1E80BB8800A9AD0C /* WazeTests */,
 				26896A3E1E80BBA100A9AD0C /* WazeKit */,
 				26896A4B1E80BBA100A9AD0C /* WazeKitTests */,
 				26896A161E80BB8800A9AD0C /* Products */,
@@ -135,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				26896A151E80BB8800A9AD0C /* Waze.app */,
-				26896A291E80BB8800A9AD0C /* WazeTests.xctest */,
 				26896A3D1E80BBA100A9AD0C /* WazeKit.framework */,
 				26896A451E80BBA100A9AD0C /* WazeKitTests.xctest */,
 			);
@@ -153,15 +133,6 @@
 				26896A241E80BB8800A9AD0C /* Info.plist */,
 			);
 			path = Waze;
-			sourceTree = "<group>";
-		};
-		26896A2C1E80BB8800A9AD0C /* WazeTests */ = {
-			isa = PBXGroup;
-			children = (
-				26896A2D1E80BB8800A9AD0C /* WazeTests.swift */,
-				26896A2F1E80BB8800A9AD0C /* Info.plist */,
-			);
-			path = WazeTests;
 			sourceTree = "<group>";
 		};
 		26896A3E1E80BBA100A9AD0C /* WazeKit */ = {
@@ -205,6 +176,7 @@
 				26896A121E80BB8800A9AD0C /* Frameworks */,
 				26896A131E80BB8800A9AD0C /* Resources */,
 				26896A571E80BBA100A9AD0C /* Embed Frameworks */,
+				26896A5D1E8182F600A9AD0C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -215,24 +187,6 @@
 			productName = Waze;
 			productReference = 26896A151E80BB8800A9AD0C /* Waze.app */;
 			productType = "com.apple.product-type.application";
-		};
-		26896A281E80BB8800A9AD0C /* WazeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 26896A351E80BB8800A9AD0C /* Build configuration list for PBXNativeTarget "WazeTests" */;
-			buildPhases = (
-				26896A251E80BB8800A9AD0C /* Sources */,
-				26896A261E80BB8800A9AD0C /* Frameworks */,
-				26896A271E80BB8800A9AD0C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				26896A2B1E80BB8800A9AD0C /* PBXTargetDependency */,
-			);
-			name = WazeTests;
-			productName = WazeTests;
-			productReference = 26896A291E80BB8800A9AD0C /* WazeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		26896A3C1E80BBA100A9AD0C /* WazeKit */ = {
 			isa = PBXNativeTarget;
@@ -286,12 +240,6 @@
 						DevelopmentTeam = M3FCT79SM9;
 						ProvisioningStyle = Automatic;
 					};
-					26896A281E80BB8800A9AD0C = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = M3FCT79SM9;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 26896A141E80BB8800A9AD0C;
-					};
 					26896A3C1E80BBA100A9AD0C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = M3FCT79SM9;
@@ -321,7 +269,6 @@
 			targets = (
 				26896A141E80BB8800A9AD0C /* Waze */,
 				26896A3C1E80BBA100A9AD0C /* WazeKit */,
-				26896A281E80BB8800A9AD0C /* WazeTests */,
 				26896A441E80BBA100A9AD0C /* WazeKitTests */,
 			);
 		};
@@ -335,13 +282,6 @@
 				26896A231E80BB8800A9AD0C /* LaunchScreen.storyboard in Resources */,
 				26896A201E80BB8800A9AD0C /* Assets.xcassets in Resources */,
 				26896A1E1E80BB8800A9AD0C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26896A271E80BB8800A9AD0C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +301,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26896A5D1E8182F600A9AD0C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/scripts/swiftlint.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26896A111E80BB8800A9AD0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,14 +325,6 @@
 			files = (
 				26896A1B1E80BB8800A9AD0C /* ViewController.swift in Sources */,
 				26896A191E80BB8800A9AD0C /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26896A251E80BB8800A9AD0C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26896A2E1E80BB8800A9AD0C /* WazeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +347,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		26896A2B1E80BB8800A9AD0C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 26896A141E80BB8800A9AD0C /* Waze */;
-			targetProxy = 26896A2A1E80BB8800A9AD0C /* PBXContainerItemProxy */;
-		};
 		26896A481E80BBA100A9AD0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26896A3C1E80BBA100A9AD0C /* WazeKit */;
@@ -563,36 +507,6 @@
 			};
 			name = Release;
 		};
-		26896A361E80BB8800A9AD0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = M3FCT79SM9;
-				INFOPLIST_FILE = WazeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallsharptools.WazeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Waze.app/Waze";
-			};
-			name = Debug;
-		};
-		26896A371E80BB8800A9AD0C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = M3FCT79SM9;
-				INFOPLIST_FILE = WazeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallsharptools.WazeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Waze.app/Waze";
-			};
-			name = Release;
-		};
 		26896A551E80BBA100A9AD0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,14 +601,6 @@
 			buildConfigurations = (
 				26896A331E80BB8800A9AD0C /* Debug */,
 				26896A341E80BB8800A9AD0C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		26896A351E80BB8800A9AD0C /* Build configuration list for PBXNativeTarget "WazeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26896A361E80BB8800A9AD0C /* Debug */,
-				26896A371E80BB8800A9AD0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

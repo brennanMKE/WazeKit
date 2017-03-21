@@ -1,0 +1,63 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "command": "sh",
+  "args": [
+    "-c"
+  ],
+  "suppressTaskName": true,
+  "tasks": [
+    {
+      "taskName": "A: Build iOS Project",
+      "isBuildCommand": true,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh build"
+      ]
+    },
+    {
+      "taskName": "B: Run Tests",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh test"
+      ]
+    },
+    {
+      "taskName": "C: Clean Build",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh clean"
+      ]
+    },
+    {
+      "taskName": "D: Run Jazzy",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh jazzy"
+      ]
+    },
+    {
+      "taskName": "E: Install Gems",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh bundle-install"
+      ]
+    },
+    {
+      "taskName": "F: CocoaPods - Lint Spec",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-spec-lint"
+      ]
+    },
+    {
+      "taskName": "G: CocoaPods - Push Trunk",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-trunk-push"
+      ]
+    }
+  ]
+}

@@ -44,24 +44,25 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         if !wazeLauncher.configurationIsValid {
-            alert(title: "Waze", message: "Application is not configured to integrate with Waze.")
+            alert(title: "Waze", message: "Application is not configured to integrate with Waze. See Info.plist.")
         }
     }
 
     private func searchAddressString(_ addressString: String) {
         if !wazeLauncher.search(withAddressString: addressString) {
-            alert(title: "Waze", message: "Cannot open Waze!")
+            alert(title: "Waze", message: "Could not open Waze!")
         }
     }
 
     private func geocodeAddressString(_ addressString: String) {
-        if let addressString = inputTextField.text, addressString.characters.count > 0 {
+        if let addressString = inputTextField.text,
+            addressString.characters.count > 0 {
             geocoder.geocodeAddressString(addressString) {
                 [weak self] (placemarks, error) in
                 if let s = self,
                     let location = placemarks?.first?.location {
                     if !s.wazeLauncher.navigate(toLocation: location) {
-                        s.alert(title: "Waze", message: "Cannot open Waze!")
+                        s.alert(title: "Waze", message: "Could not open Waze!")
                     }
                 }
             }

@@ -6,19 +6,21 @@
 //  Copyright © 2017 SmallSharpTools LLC. All rights reserved.
 //
 
-// Waze developer documentions:
-// https://www.waze.com/about/dev
-
 import Foundation
 import UIKit
 import CoreLocation
 
+/// Waze Launcher
+///
+/// Waze Developer Documention:
+/// https://www.waze.com/about/dev
 open class WazeLauncher: NSObject {
 
     private var baseURL: URL? {
         return URL(string: "waze://")
     }
 
+    /// Checks if configuration is valid for use with the Waze URL Scheme.
     public var configurationIsValid: Bool {
         guard let schemes = Bundle.main.infoDictionary?["LSApplicationQueriesSchemes"] as? [String] else {
             return false
@@ -27,10 +29,18 @@ open class WazeLauncher: NSObject {
         return schemes.contains("waze")
     }
 
+    /// Navigation to location.
+    ///
+    /// - Parameter location: location
+    /// - Returns: success
     open func navigate(toLocation location: CLLocation) -> Bool {
         return navigate(toCoordinate: location.coordinate)
     }
 
+    /// Navigate to coordinate.
+    ///
+    /// - Parameter coordinate: coordinate
+    /// - Returns: success
     open func navigate(toCoordinate coordinate: CLLocationCoordinate2D) -> Bool {
         let params = [
             "ll" : "\(coordinate.latitude),\(coordinate.longitude)",
@@ -39,6 +49,10 @@ open class WazeLauncher: NSObject {
         return openApplication(withParameters: params)
     }
 
+    /// Search with address string.
+    ///
+    /// - Parameter addressString: address string
+    /// - Returns: success
     open func search(withAddressString addressString: String) -> Bool {
         let params = ["q" : addressString]
         return openApplication(withParameters: params)
