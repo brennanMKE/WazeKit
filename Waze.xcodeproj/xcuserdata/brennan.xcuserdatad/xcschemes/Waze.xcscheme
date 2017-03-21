@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Waze.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26896A441E80BBA100A9AD0C"
+               BuildableName = "WazeKitTests.xctest"
+               BlueprintName = "WazeKitTests"
+               ReferencedContainer = "container:Waze.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
