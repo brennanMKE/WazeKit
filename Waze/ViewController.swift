@@ -26,15 +26,43 @@ class ViewController: UIViewController {
         if let addressString = inputTextField.text, addressString.characters.count > 0 {
             geocodeAddressString(addressString)
         }
+        else {
+            alert(title: "Waze", message: "Please enter an address.")
+        }
         self.setEditing(false, animated: true)
     }
 
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        if let addressString = inputTextField.text, addressString.characters.count > 0 {
+            geocodeAddressString(addressString)
+        }
+        else {
+            alert(title: "Waze", message: "Please enter an address.")
+        }
+        self.setEditing(false, animated: true)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        if !wazeLauncher.configurationIsValid {
+            alert(title: "Waze", message: "Application is not configured to integrate with Waze.")
+        }
+    }
+
     private func geocodeAddressString(_ addressString: String) {
-        geocoder.geocodeAddressString(addressString) { [weak self] (placemarks, error) in
-            if let location = placemarks?.first?.location {
-                self?.wazeLauncher.navigate(toLocation: location)
+        if let addressString = inputTextField.text, addressString.characters.count > 0 {
+            let opened = wazeLauncher.searchAddressString(addressString)
+
+            if !opened {
+                alert(title: "Waze", message: "Cannot open Waze!")
             }
         }
     }
-    
+
+    private func alert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
+
 }
