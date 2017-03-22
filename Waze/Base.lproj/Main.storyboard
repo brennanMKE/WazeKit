@@ -13,7 +13,7 @@
         <!--Waze-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Waze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Launcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,15 +44,26 @@
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYe-dk-UW1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-mc-ywQ">
+                                <rect key="frame" x="104" y="151" width="167.5" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Open App Store"/>
+                                <connections>
+                                    <action selector="openAppStoreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WyB-3X-MxF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UPs-Oo-8DE" firstAttribute="width" secondItem="jJd-GO-HQY" secondAttribute="width" id="3ew-X6-GRN"/>
+                            <constraint firstItem="kgZ-mc-ywQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AiP-gh-N5I"/>
                             <constraint firstItem="t4q-VS-9fb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAB-Ne-2l8"/>
                             <constraint firstAttribute="leadingMargin" secondItem="UPs-Oo-8DE" secondAttribute="leading" id="KTM-hR-TUS"/>
                             <constraint firstItem="jJd-GO-HQY" firstAttribute="leading" secondItem="UPs-Oo-8DE" secondAttribute="trailing" constant="8" id="NEI-KQ-o0b"/>
                             <constraint firstItem="jJd-GO-HQY" firstAttribute="top" secondItem="t4q-VS-9fb" secondAttribute="bottom" constant="8" id="Oer-E9-as4"/>
+                            <constraint firstItem="kgZ-mc-ywQ" firstAttribute="top" secondItem="UPs-Oo-8DE" secondAttribute="bottom" constant="8" id="Riz-57-vAn"/>
                             <constraint firstItem="t4q-VS-9fb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="SYE-EG-NDg"/>
+                            <constraint firstItem="kgZ-mc-ywQ" firstAttribute="width" secondItem="UPs-Oo-8DE" secondAttribute="width" id="YhV-IL-SOL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jJd-GO-HQY" secondAttribute="trailing" id="Yuk-c5-6Jv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="t4q-VS-9fb" secondAttribute="leading" id="eT4-ZG-uiT"/>
                             <constraint firstItem="UPs-Oo-8DE" firstAttribute="top" secondItem="t4q-VS-9fb" secondAttribute="bottom" constant="8" id="rcy-9s-WUY"/>

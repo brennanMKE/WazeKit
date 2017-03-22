@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         return WazeLauncher()
     }()
 
+    override func viewDidAppear(_ animated: Bool) {
+        if !wazeLauncher.configurationIsValid {
+            alert(title: "Waze", message: "Application is not configured to integrate with Waze. See Info.plist.")
+        }
+    }
+
     @IBAction func navigateButtonTapped(_ sender: Any) {
         if let addressString = inputTextField.text, addressString.characters.count > 0 {
             geocodeAddressString(addressString)
@@ -42,10 +48,8 @@ class ViewController: UIViewController {
         self.setEditing(false, animated: true)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if !wazeLauncher.configurationIsValid {
-            alert(title: "Waze", message: "Application is not configured to integrate with Waze. See Info.plist.")
-        }
+    @IBAction func openAppStoreButtonTapped(_ sender: Any) {
+        promptToOpenAppStore()
     }
 
     private func searchAddressString(_ addressString: String) {
