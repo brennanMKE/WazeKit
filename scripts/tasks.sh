@@ -11,7 +11,7 @@ Scheme="${ProjectName}"
 Project="${ProjectName}.xcodeproj"
 Workspace=""
 Target="${ProjectName}"
-GitHubPrefix="brennanMKE" 
+GitHubPrefix="brennanMKE"
 
 TestPlatform="iOS Simulator"
 TestName="iPhone 7"
