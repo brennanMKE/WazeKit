@@ -20,6 +20,10 @@ open class WazeLauncher: NSObject {
         return URL(string: "waze://")
     }
 
+    private var appStoreURL: URL? {
+        return URL(string: "https://itunes.apple.com/us/app/id323229106")
+    }
+
     /// Checks if configuration is valid for use with the Waze URL Scheme.
     public var configurationIsValid: Bool {
         guard let schemes = Bundle.main.infoDictionary?["LSApplicationQueriesSchemes"] as? [String] else {
@@ -56,6 +60,14 @@ open class WazeLauncher: NSObject {
     open func search(withAddressString addressString: String) -> Bool {
         let params = ["q" : addressString]
         return openApplication(withParameters: params)
+    }
+
+    /// Open App Store for Waze app.
+    open func openAppStore() {
+        guard let appStoreURL = appStoreURL else {
+            fatalError("Failure getting URL for App Store")
+        }
+        UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
     }
 
     // MARK: - Internal -

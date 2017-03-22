@@ -4,7 +4,7 @@ set -e
 
 Command="$1"
 
-AppVersion="0.0.4"
+AppVersion="0.0.5"
 ProjectName="WazeKit"
 ProjectDir="`dirname \"$0\"`"
 Scheme="${ProjectName}"

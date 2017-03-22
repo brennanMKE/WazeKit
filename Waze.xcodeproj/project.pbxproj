@@ -59,7 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		26896A151E80BB8800A9AD0C /* Waze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26896A151E80BB8800A9AD0C /* Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26896A181E80BB8800A9AD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26896A1A1E80BB8800A9AD0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26896A1D1E80BB8800A9AD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		26896A161E80BB8800A9AD0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26896A151E80BB8800A9AD0C /* Waze.app */,
+				26896A151E80BB8800A9AD0C /* Launcher.app */,
 				26896A3D1E80BBA100A9AD0C /* WazeKit.framework */,
 				26896A451E80BBA100A9AD0C /* WazeKitTests.xctest */,
 			);
@@ -185,7 +185,7 @@
 			);
 			name = Waze;
 			productName = Waze;
-			productReference = 26896A151E80BB8800A9AD0C /* Waze.app */;
+			productReference = 26896A151E80BB8800A9AD0C /* Launcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 		26896A3C1E80BBA100A9AD0C /* WazeKit */ = {
@@ -487,7 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallsharptools.Waze;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Launcher;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -502,7 +502,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallsharptools.Waze;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Launcher;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

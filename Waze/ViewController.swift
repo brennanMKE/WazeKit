@@ -50,7 +50,7 @@ class ViewController: UIViewController {
 
     private func searchAddressString(_ addressString: String) {
         if !wazeLauncher.search(withAddressString: addressString) {
-            alert(title: "Waze", message: "Could not open Waze!")
+            promptToOpenAppStore()
         }
     }
 
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                 if let s = self,
                     let location = placemarks?.first?.location {
                     if !s.wazeLauncher.navigate(toLocation: location) {
-                        s.alert(title: "Waze", message: "Could not open Waze!")
+                        s.promptToOpenAppStore()
                     }
                 }
             }
@@ -73,6 +73,20 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(action)
+        present(alertController, animated: true)
+    }
+
+    private func promptToOpenAppStore() {
+        let title = "Waze"
+        let message = "The Waze app is not installed. Would you like to install it now?"
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) {
+            [unowned self] (action) in
+            self.wazeLauncher.openAppStore()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
         present(alertController, animated: true)
     }
 
