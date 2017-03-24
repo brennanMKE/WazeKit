@@ -8,6 +8,16 @@
 
 Swift implementation of the Waze URL Schemes. See [Waze Developer Documention].
 
+## Configurating Your App
+
+It is necessary to add some details to your Info.plist so that your app is allowed to check if the URL for Waze can be opened. This is a new requirement as of iOS 9. See [LSApplicationQueriesSchemes] for more details.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>waze</string>
+</array>
+```
 
 ## CocoaPods
 
@@ -41,4 +51,4 @@ Brennan Stehling - 2017
 [CocoaPods]: http://cocoapods.org
 [Carthage]: https://github.com/carthage/carthage
 [Swift Package Manager]: https://swift.org/package-manager/
-[Jazzy]: https://github.com/realm/jazzy
+[LSApplicationQueriesSchemes]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
